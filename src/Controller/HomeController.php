@@ -2,29 +2,14 @@
 
 namespace App\Controller;
 
-use App\Services\Accueil;
-
-
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeController {
-/** 
-    *Page d'accueil
-    *
-    *@Route("/", name="homepage")
-    */
-    public function index(): Response
+class HomeController extends AbstractController
+{
+    public function index()
     {
-            return new Response('
-            <nav>
-            <ul>
-                <li><a href="{{ path(articles) }}">Articles</a></li>
-            </ul>
-        </nav>
-            ');
+        return $this->render('menu.html.twig', [
+       ]);
     }
-
-        
-
 }

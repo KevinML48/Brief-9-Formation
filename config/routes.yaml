@@ -11,3 +11,11 @@ homepage:
 articles:
     path: /articles
     controller: App\Controller\ArticlesController::articles 
+
+admin:
+    path: /admin
+    controller: App\Controller\AdminController::admin
+
+jeuxavis:
+    path: /jeuxavis/{id}
+    controller: App\Controller\JeuxAvisController::jeuxavis

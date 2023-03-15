@@ -1,0 +1,9 @@
+<h1>{{ jeux.titre }}</h1>
+
+{% if avis_pdo|length > 0 %}
+    <h2>Avis :</h2>
+
+    {% for avis in avis_pdo %}
+        <p>Note : {{ avis.note }}</p>
+    {% endfor %}
+{% endif %}
