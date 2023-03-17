@@ -3,22 +3,26 @@
 {% block title %}Nos jeux{% endblock %}
 
 {% block body %}
-   {% for jeu in jeux %}
-    <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="{{jeu.image}}" alt="" width="190px" height="255px">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{jeu.titre}}</h5>
-        <p class="card-text">{{jeu.description}}</p>
-        <p><a href="{{ path('jeuxavis', {'id': jeu.id}) }}">Voir les avis</a></p>
-      </div>
+{% for jeu in jeux|batch(3) %}
+  <div class="container">
+    <div class="row">
+      {% for j in jeu %}
+        <div class="col-md-4">
+          <div class="card" style="max-width: 25rem;">
+            <img src="{{j.image}}" class="img-fluid rounded-start" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{j.titre}}</h5>
+              <p class="card-text">{{j.description|slice(0, 100) ~ '...' }}</p>
+              <a href="{{ path('jeuxavis', {'id': j.id}) }}" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sunglasses" viewBox="0 0 16 16">
+                  <path d="M3 5a2 2 0 0 0-2 2v.5H.5a.5.5 0 0 0 0 1H1V9a2 2 0 0 0 2 2h1a3 3 0 0 0 3-3 1 1 0 1 1 2 0 3 3 0 0 0 3 3h1a2 2 0 0 0 2-2v-.5h.5a.5.5 0 0 0 0-1H15V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-1.888 1.338A1.99 1.99 0 0 0 8 6a1.99 1.99 0 0 0-1.112.338A2 2 0 0 0 5 5H3zm0 1h.941c.264 0 .348.356.112.474l-.457.228a2 2 0 0 0-.894.894l-.228.457C2.356 8.289 2 8.205 2 7.94V7a1 1 0 0 1 1-1z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
-</div>
 {% endfor %}
-
- 
 {% endblock %}

@@ -19,3 +19,11 @@ admin:
 jeuxavis:
     path: /jeuxavis/{id}
     controller: App\Controller\JeuxAvisController::jeuxavis
+
+categories:
+    path: /categories
+    controller: App\Controller\DefaultController::index
+
+categorie:
+    path: /categorie/categories/{id}
+    controller: App\Controller\DefaultController::jeuxParCategorie

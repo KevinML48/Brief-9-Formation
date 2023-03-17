@@ -22,7 +22,7 @@ class Admin
         if( ($this->username=='Joe') && ($this->password=='Joe48') )
         {
             return new Response(
-                'Bienvenue sur votre page Admin',
+                '<button type="button" class="btn btn-dark"><a href="admin.php">Dark</a></button>',
             );
         }
 
