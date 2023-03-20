@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Déconnexion{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">{{ 'security.logout.header'|trans }}</div>
+                    <div class="card-body">
+                        <p>{{ 'security.logout.logged_out'|trans }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

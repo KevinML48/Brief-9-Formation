@@ -37,3 +37,27 @@ when@test:
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
+
+        security:
+            encoders:
+                App\Entity\User:
+                     algorithm: bcrypt
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    user:
+                        password: $2y$13$12yPp9XK0z0q3H3no8mZ..wQK1DzbvE0tRm8KjB0oXOIkOvHM5QzK
+                        roles: 'ROLE_USER'
+    firewalls:
+        main:
+            anonymous: ~
+            http_basic: ~
+            form_login:
+                login_path: login
+                check_path: login
+            logout:
+                path: logout
+                target: homepage
+   
