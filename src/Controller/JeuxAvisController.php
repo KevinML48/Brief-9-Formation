@@ -14,9 +14,9 @@ use PDO;
 class JeuxAvisController extends AbstractController
 {
     /**
-     * @Route("/jeuxavis/{id}", name="jeuxavis")
+     * @Route("/jeuxavis/{id}", name="app_jeux_note")
      */
-    public function jeuxavis($id, EntityManagerInterface $entityManager): Response
+    public function app_jeux_note($id, EntityManagerInterface $entityManager): Response
     {
 
         // Exemple de récupération de données depuis une base de données en utilisant PDO

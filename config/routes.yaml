@@ -16,9 +16,10 @@ admin:
     path: /admin
     controller: App\Controller\AdminController::admin
 
-jeuxavis:
+app_jeux_note:
     path: /jeuxavis/{id}
-    controller: App\Controller\JeuxAvisController::jeuxavis
+    controller: App\Controller\JeuxAvisController::app_jeux_note
+
 
 categories:
     path: /categories

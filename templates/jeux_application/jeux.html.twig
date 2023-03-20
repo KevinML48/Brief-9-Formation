@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ jeu.titre }} {% endblock %}
+
+{% block body %}
+
+
+    <h1 class="title">{{ jeu.titre }}</h1>
+            
+    <div class="card" style="width: 18rem;">
+  <img src="{{ jeu.image }}" alt="Image">
+  <div class="card-body">
+    <h5 class="card-title">{{ jeu.titre }}</h5>
+    <p class="card-text">{{ jeu.description }}</p>
+    <a href="{{ path('app_jeux_note', {'id': jeu.id}) }}" class="btn btn-primary">Voir la note </a>
+  </div>
+</div>
+    
+
+              
+      
+
+{% endblock %}

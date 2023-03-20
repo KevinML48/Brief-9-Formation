@@ -5,10 +5,10 @@
 {% block body %}
     <h1>Liste des catégories</h1>
 
-<div class="row row-cols-1 row-cols-md-3 mt-4 g-5 justify-content-center">
+<div class="row row-cols-3 mt-4 g-5 justify-content-center">
       {% for genre in genres %}
         <div class="col-md-4 mb-4">
-          <div class="card h-100" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">{{ genre.titre }}</h5>
               <a href="{{path('categorie', {'id':genre.id})}}" class="btn btn-primary stretched-link">Voir la categorie</a>
@@ -16,4 +16,6 @@
           </div>
         </div>
       {% endfor %}
+</div>
+
 {% endblock %}
