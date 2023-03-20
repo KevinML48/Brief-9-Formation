@@ -1,23 +1,28 @@
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Nos jeux{% endblock %}
 
 {% block body %}
-{% for jeu in jeux|batch(3) %}
-  <div class="container">
+<h1 class="title text-center">LE COIN DU GEEK</h1>
+<button>
+    <a href="{{path('homepage')}}"> Acceuil </a>
+</button>
+<div class="container">
     <div class="row">
-      {% for j in jeu %}
-        <div class="col-md-4">
-          <div class="card" style="max-width: 25rem;">
-            <img src="{{j.image}}" class="img-fluid rounded-start" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{j.titre}}</h5>
-              <a href="{{ path('app_jeux_application_show', {'id': j.id}) }}" class="btn btn-primary">Voir le jeux</a>
+        {% for jeu in pagination %}
+            <div class="col-md-4">
+                <div class="card" style="max-width: 25rem;">
+                    <img src="{{ jeu.image }}" class="img-fluid rounded-start" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ jeu.titre }}</h5>
+                        <a href="{{ path('app_jeux_application_show', {'id': jeu.id}) }}" class="btn btn-primary">Voir le jeux</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
     </div>
-  </div>
-{% endfor %}
+</div>
+
+{{ knp_pagination_render (pagination) }}
 {% endblock %}

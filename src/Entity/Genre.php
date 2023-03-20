@@ -30,6 +30,11 @@ class Genre
         $this->jeuxes = new ArrayCollection();
     }
 
+    public function __toString()
+{
+    return $this->getTitre();
+}
+
     public function getId(): ?int
     {
         return $this->id;

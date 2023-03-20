@@ -12,10 +12,10 @@
         <i class="fas fa-bars" id="sidebar_btn"></i>
       </label>
       <div class="left_area">
-        <h3>3 <span>mousquetaires</span></h3>
+        <h3>Le coin <span>du geek</span></h3>
       </div>
       <div class="right_area">
-        <a href="#" class="logout_btn">deconnexion</a>
+        <a href="http://localhost:8000/acceuil" class="logout_btn">Revenir a la page acceuil</a>
       </div>
     </header>
     <div class="sidebar">
@@ -23,9 +23,9 @@
         <img src="https://cdn.shopify.com/s/files/1/0636/8837/6542/files/HP_About__PDP_950x950_e189e9f0-3832-490a-9952-fc8b1c2245d4.png?v=1663168575&width=500" class="profile_image" alt=""/>
         <h4>Admin</h4>
       </div>
-      <a href="#">
+      <a href="http://localhost:8000/jeux">
         <i class="fas fa-desktop"></i>
-        <span>Dashboard</span>
+        <span>Crud</span>
       </a>
     </div>
     <div class="content">

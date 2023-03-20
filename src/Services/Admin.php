@@ -22,13 +22,14 @@ class Admin
         if( ($this->username=='Joe') && ($this->password=='Joe48') )
         {
             return new Response(
-                '<button type="button" class="btn btn-dark"><a href="admin.php">Dark</a></button>',
+                '<button type="button" class="btn btn-dark"><a href="admin.php">Accés au Dash Board</a></button>',
             );
         }
 
         else{
             return new Response(
-                '<html><body>
+                '<html>
+                <body>
                 <form method="post" action="">
                 <div class="form-group">
                     <label for="username">Pseudo :</label>

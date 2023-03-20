@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un jeu{% endblock %}
+
+{% block body %}
+<body class="bg-dark">
+
+    <div class="row">
+        <div class="col-12 text-center text-white">
+            <h1>Ajouter des jeux</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right">
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-white ">
+                {{ form_start(form) }}
+                    {{ form_errors(form) }}
+
+                    <div class="form-group">
+                        {{ form_label(form.titre, 'titre', {'label_attr': {'class': 'text-white'}}) }}
+                        {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.description, 'description', {'label_attr': {'class': 'text-white'}}) }}
+                        {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.url, 'url', {'label_attr': {'class': 'text-white'}}) }}
+                        {{ form_widget(form.url, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

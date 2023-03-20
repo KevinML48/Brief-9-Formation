@@ -5,7 +5,7 @@ controllers:
     type: attribute
 
 homepage:
-    path: /
+    path: /acceuil
     controller: App\Controller\HomeController::index
 
 articles:

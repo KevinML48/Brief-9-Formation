@@ -40,4 +40,12 @@ class JeuxRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+  public function paginationQuery()
+    {
+        return $this->createQueryBuilder('j')
+          ->orderBy('j.id', 'ASC')
+            ->getQuery()
+        ;
+    }
 }
